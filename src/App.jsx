@@ -12,10 +12,27 @@ function App() {
   const [weatherData, setWeatherData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [headerVisible, setHeaderVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     fetchWeather(latitude, longitude);
   }, [latitude, longitude]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        setHeaderVisible(false);
+      } else {
+        setHeaderVisible(true);
+      }
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
 
   const fetchWeather = async (lat, lon) => {
     try {
@@ -72,7 +89,9 @@ function App() {
         backgroundColor: 'rgba(15, 23, 42, 0.3)',
         position: 'sticky',
         top: 0,
-        zIndex: 50
+        zIndex: 50,
+        transform: `translateY(${headerVisible ? '0' : '-100%'})`,
+        transition: 'transform 0.3s ease-out'
       }}>
         <div style={{
           maxWidth: '1400px',
