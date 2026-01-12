@@ -151,7 +151,6 @@ export default function HourlyForecast({ hourly }) {
                 fontSize: '12px',
                 fontWeight: '600',
                 color: isCurrentHour ? '#60a5fa' : '#cbd5e1',
-                marginBottom: '4px',
                 margin: 0,
                 marginBottom: '6px'
               }}>

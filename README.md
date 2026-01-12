@@ -144,7 +144,39 @@ npm run dev       # Inicia servidor de desenvolvimento
 npm run build     # Build para produção
 npm run lint      # Verifica linting
 npm run preview   # Preview do build
+npm test          # Executa testes unitários e de integração
+npm run test:ui   # Executa testes com interface visual
 ```
+
+## 🧪 Testes
+
+O projeto inclui testes automatizados para validar a integração com as APIs e funções utilitárias.
+
+### Rodar Testes
+
+```bash
+# Executa todos os testes
+npm test
+
+# Executa testes com interface visual (recomendado)
+npm run test:ui
+
+# Executa testes em modo watch
+npm test -- --watch
+```
+
+### Cobertura de Testes
+
+**Testes de Integração** (`src/test/api.test.js`):
+- ✅ Validação de conexão com Open-Meteo Weather API
+- ✅ Validação de conexão com Air Quality API
+- ✅ Validação de busca de cidades com Geocoding API
+
+**Testes Unitários** (`src/test/utils.test.js`):
+- ✅ Mapeamento de códigos de clima para descrições
+- ✅ Mapeamento de códigos de clima para emojis
+- ✅ Cálculo de níveis de risco UV
+- ✅ Formatação de horários
 
 ## 📱 Browser Support
 
@@ -153,7 +185,36 @@ npm run preview   # Preview do build
 - Safari 14+
 - Mobile browsers (iOS Safari, Chrome Mobile)
 
-## 📄 Licença
+## � Próximos Passos
+
+### 📲 Melhorias de Responsividade
+
+- [ ] Otimizar layout mobile para telas < 360px
+- [ ] Melhorar spacing e padding em dispositivos pequenos
+- [ ] Ajustar tamanhos de fonte para melhor legibilidade mobile
+- [ ] Implementar drawer menu para navegação em mobile
+- [ ] Testar em dispositivos reais (iOS e Android)
+- [ ] Adicionar orientação landscape com layout otimizado
+
+### 💾 Sistema de Cache
+
+- [ ] Implementar cache local com LocalStorage para dados de clima
+- [ ] Adicionar Service Worker para funcionar offline
+- [ ] Cache de imagens e assets estáticos
+- [ ] Expiração automática de cache (ex: 30 minutos para dados de clima)
+- [ ] Indicador visual quando dados vêm do cache
+- [ ] Sincronização automática quando conexão retorna
+
+### 🎯 Outras Melhorias Futuras
+
+- [ ] Suporte a múltiplas localidades favoritas
+- [ ] Histórico de buscas
+- [ ] Notificações de alertas de clima severo
+- [ ] Gráficos de tendência de temperatura
+- [ ] Integração com calendário para sugerir melhores dias para atividades
+- [ ] Tema claro/escuro configurável
+
+## �📄 Licença
 
 Este projeto é de uso livre.
 
