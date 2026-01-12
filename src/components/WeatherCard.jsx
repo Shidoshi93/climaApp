@@ -175,7 +175,6 @@ export default function WeatherCard({ city, current, daily }) {
         </div>
       </div>
 
-      {/* 5-Day Forecast */}
       {daily && (
         <div style={{
           borderTop: '1px solid rgba(255, 255, 255, 0.2)',

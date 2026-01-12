@@ -1,0 +1,29 @@
+<svg width="192" height="192" viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="96" cy="96" r="92" fill="url(#bgGradient)" stroke="rgba(255, 255, 255, 0.2)" stroke-width="2"/>
+  
+  <!-- Sun -->
+  <circle cx="120" cy="60" r="24" fill="#FCD34D"/>
+  
+  <!-- Sun rays -->
+  <line x1="120" y1="24" x2="120" y2="12" stroke="#FCD34D" stroke-width="3" stroke-linecap="round"/>
+  <line x1="156" y1="60" x2="168" y2="60" stroke="#FCD34D" stroke-width="3" stroke-linecap="round"/>
+  <line x1="144" y1="36" x2="153" y2="27" stroke="#FCD34D" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Cloud -->
+  <path d="M 45 100 C 40 95, 32 95, 28 100 C 25 98, 20 100, 20 107 C 20 115, 27 122, 35 122 L 120 122 C 128 122, 135 115, 135 107 C 135 99, 128 92, 120 92 C 118 85, 112 80, 105 80 C 95 80, 87 87, 85 97 C 78 96, 70 99, 70 107" 
+        fill="rgba(255, 255, 255, 0.9)" stroke="rgba(255, 255, 255, 0.3)" stroke-width="1"/>
+  
+  <!-- Rain drops -->
+  <path d="M 55 135 L 50 150 Q 50 155 55 155 Q 60 155 60 150 L 55 135" fill="rgba(96, 165, 250, 0.8)"/>
+  <path d="M 85 140 L 80 155 Q 80 160 85 160 Q 90 160 90 155 L 85 140" fill="rgba(96, 165, 250, 0.8)"/>
+  <path d="M 115 135 L 110 150 Q 110 155 115 155 Q 120 155 120 150 L 115 135" fill="rgba(96, 165, 250, 0.8)"/>
+  
+  <!-- Gradient definitions -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(30, 58, 138, 0.4);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(59, 130, 246, 0.3);stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>
